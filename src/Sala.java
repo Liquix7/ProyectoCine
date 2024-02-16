@@ -22,4 +22,26 @@ public class Sala {
             }
         }
     }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public Pelicula getPelicula() {
+        return pelicula;
+    }
+
+    public void verMatriz() {
+        for (String[] fila : butacas) {
+            for (String asiento : fila) {
+                if (asiento.isEmpty()) {
+                    System.out.print("[ ]");
+                } else {
+                    System.out.print("[X]");
+                }
+
+            }
+            System.out.println();
+        }
+    }
 }
