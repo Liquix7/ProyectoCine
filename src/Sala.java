@@ -1,11 +1,32 @@
 import java.util.Random;
 import java.util.Scanner;
-
+/**
+ * Esta clase representa las salas con sus características y funcionalidades.
+ */
 public class Sala {
+    /**
+     * El número de la sala.
+     */
     private int numero;
+
+    /**
+     * La película que se proyecta en la sala.
+     */
     private Pelicula pelicula;
+
+    /**
+     * Un array bidimensional de Strings que representa las butacas de la sala, donde "Ocupado" indica una butaca ocupada y "" una butaca libre.
+     */
     private String[][] butacas;
 
+    /**
+     * Constructor de la clase Sala.
+     *
+     * @param numero El número de la sala.
+     * @param pelicula La película que se proyecta en la sala.
+     * @param filas El número de filas de butacas en la sala.
+     * @param columnas El número de columnas de butacas en la sala.
+     */
     public Sala(int numero, Pelicula pelicula, int filas, int columnas) {
         this.numero = numero;
         this.pelicula = pelicula;
@@ -24,14 +45,28 @@ public class Sala {
         }
     }
 
+    /**
+     * Obtiene el número de la sala.
+     *
+     * @return El número de la sala.
+     */
     public int getNumero() {
         return numero;
     }
 
+    /**
+     * Obtiene la película que se proyecta en la sala.
+     *
+     * @return La película que se proyecta en la sala.
+     */
     public Pelicula getPelicula() {
         return pelicula;
     }
 
+
+    /**
+     * Muestra una representación gráfica de la matriz de butacas.
+     */
     public void verMatriz() {
         for (String[] fila : butacas) {
             for (String asiento : fila) {
@@ -46,6 +81,10 @@ public class Sala {
         }
     }
 
+
+    /**
+     * Permite Reservar asientos en la butaca deseada
+     */
     public void reservarAsiento() {
         Scanner scanner = new Scanner(System.in);
 
